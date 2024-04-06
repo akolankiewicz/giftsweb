@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="estilo.css" rel="stylesheet">
+    <title>Página de Perfil</title>
+</head>
+<body>
+
+    <div class="container"> 
+        <header class="row clearfix">
+            <div>
+                <img src="img/PRESENTES_._MEU-removebg-preview.png" height="200">
+            </div>
+        </header>
+    
+        <nav class="row clearfix caixa">
+            <ul class="nav justify-content-center ">
+                <li class="nav-item">
+                  <a class="nav-link text-danger"  href="index.html">ÍNICIO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="listas.html">LISTA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="produtos.html">PRODUTOS</a>
+                </li>
+                
+              </ul>
+        </nav>
+
+     <div class="row clearfix caixa">
+
+        <hr>
+        <h2> 
+         <strong> Meu Perfil </strong>
+        </h2>
+        <hr>
+     <section class="col-md-6"> 
+        <h4> Imagem de Perfil </h4>
+        <img src="img/usuario/Design sem nome.jpg" alt="">
+        <hr />
+        <form class="form-estilo" method="post" enctype="multipart/form-data">
+            <p><input class="form-control" type="file" name="arquivo" /></p>
+            <p> <button name="enviar foto" class="btn btn-lg btn-info btn-block" type="submit"> Enviar </button></p>
+
+        </form>
+       
+    </section >
+
+    <section class="col-md-6"> 
+       <h4 class="titulo"> Dados do Perfil </h4>
+       <p> Nome: usuario </p>
+       <p> Email: usuario@gmail.com </p>
+       <p><a href="#">Meu Link</a></p>
+       <p> Data de criação: 12/12/2012</p>
+       <br />
+
+       <div class="bg-warning"> 
+        <h3> Minha Lista </h3>
+        <p> Nome: Lista de aniversário </p>
+        <form method="post">
+            <input type="text" name="Descrição" placeholder="Coloque aqui o nome da sua lista" required />
+            <button name="cria lista" class="btn btn-danger" type="submit"> Criar lista</button>
+            <span class="glyphicon glyphicon-remove" > Excluir </span>
+
+        </form>
+       </div>
+    </section>
+</div>
+<hr>
+<h2><strong> Serviços para sua lista </strong> </h2>
+<hr>
+
+    <div class="row clearfix"> 
+    <section class="col-md-6" style="background-color: #fff;"> 
+        <h3 class="titulo"> Itens da minha lista </h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Código </th>
+                    <th> Descrição </th>
+                    <th> Excluir </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 6</td>
+                    <td> Computador </td>
+                    <td> 
+                        <form method="post">
+                            <input type="hidden" name="codProduto" value="6">
+                            <button name="excluir item" class="btn btn-danger" type="submit">
+                                <span class="glyphicon glyphicon-remove"> </span> Excluir </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </section>
+
+    <section class="col-md-6 caixa"> 
+         <h3 class="titulo"> Indicar para um amigo </h3>
+            <form class="form-estilo" method="post"> 
+                <input type="hidden" name="link" value="x" />
+                <p><input type="text" name="nome" class="form-control" placeholder="nome" required></p>
+                <p><input type="email" name="email" class="form-control" placeholder="Email" required></p>
+                <p><button class="btn btn-lg btn-info btn-block" type="submit"> Indicar </button></p>
+
+
+            </form>
+    </section>
+</div>
+    </div>
+</body>
+</html> 
